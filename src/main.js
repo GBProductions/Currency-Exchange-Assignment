@@ -4,6 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 
 
-$('document').ready(function(){
+
+$('document').ready(function() {
+  $('#submitUSD').click(function() {
+    const usDollar = parseInt($('#usdInput').val());
+    $('currencyConvert').val("");
+  });
 
 });
