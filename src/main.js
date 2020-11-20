@@ -8,6 +8,7 @@ import { convertAUD, convertEUR, convertGBP, convertJPY, convertCHF, notCurrency
 
 $('document').ready(function() {
   $('#submitUSD').click(function() {
+    event.preventDefault();
     const usDollar = parseInt($('#usdInput').val());
     $('#usdInput').val("");
     const currency = $('#currencyConvert').val();
@@ -15,7 +16,7 @@ $('document').ready(function() {
 
 
     let request = new XMLHttpRequest();
-    const url = `https://v6.exchangerate-api.com/v6/61905536dd0b5c15fe86d220/latest/USD`;
+    const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`;
 
     request.onreadystatechange = function() {
       if (currency === "AUD" && this.readyState === 4 && this.status === 200) {
@@ -33,10 +34,15 @@ $('document').ready(function() {
       } else if (currency === "CHF" && this.readyState === 4 && this.status === 200) {
         const response = JSON.parse(this.responseText);
         convertCHF(response, usDollar);
-      } else if (currency === "CHF" && this.readyState === 4 && this.status === 200) {
-        const response = JSON.parse(this.responseText);
+      } else if ((currency !== "EUR" || "GBP" || "JPY" || "CHF") && this.readyState === 4 && this.status === 200) {
         notCurrency(currency);
-
+      }
+      if (this.readyState !== 4 || this.status !== 200) {
+        let error = this.status;
+        statusError(error);
+      }
     };
+    request.open("GET", url, true);
+    request.send();
   });
 });

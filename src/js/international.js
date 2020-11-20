@@ -1,10 +1,7 @@
 import $ from 'jquery';
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './css/styles.css';
 
 export function convertAUD(response, usDollar) {
-  $('.showAUD').text("");
+  $('.showAUD').text("Your $" + usDollar + " is equal to " + (response.conversion_rates.AUD * usDollar) + " AUD");
   $('.showEUR').text("");
   $('.showGBP').text("");
   $('.showJPY').text("");
@@ -15,7 +12,7 @@ export function convertAUD(response, usDollar) {
 
 export function convertEUR(response, usDollar) {
   $('.showAUD').text("");
-  $('.showEUR').text("");
+  $('.showEUR').text("Your $" + usDollar + " is equal to " + (response.conversion_rates.EUR * usDollar) + " EUR");
   $('.showGBP').text("");
   $('.showJPY').text("");
   $('.showCHF').text("");
@@ -26,7 +23,7 @@ export function convertEUR(response, usDollar) {
 export function convertGBP(response, usDollar) {
   $('.showAUD').text("");
   $('.showEUR').text("");
-  $('.showGBP').text("");
+  $('.showGBP').text("Your $" + usDollar + " is equal to " + (response.conversion_rates.GBP * usDollar) + " GBP");
   $('.showJPY').text("");
   $('.showCHF').text("");
   $('.showErrors').text("");
@@ -37,7 +34,7 @@ export function convertJPY(response, usDollar) {
   $('.showAUD').text("");
   $('.showEUR').text("");
   $('.showGBP').text("");
-  $('.showJPY').text("");
+  $('.showJPY').text("Your $" + usDollar + " is equal to " + (response.conversion_rates.JPY * usDollar) + " JPY");
   $('.showCHF').text("");
   $('.showErrors').text("");
   $('.statusError').text("");
@@ -48,7 +45,7 @@ export function convertCHF(response, usDollar) {
   $('.showEUR').text("");
   $('.showGBP').text("");
   $('.showJPY').text("");
-  $('.showCHF').text("");
+  $('.showCHF').text("Your $" + usDollar + " is equal to " + (response.conversion_rates.CHF * usDollar) + " CHF");
   $('.showErrors').text("");
   $('.statusError').text("");
 }
@@ -59,8 +56,8 @@ export function notCurrency(currency) {
   $('.showGBP').text("");
   $('.showJPY').text("");
   $('.showCHF').text("");
-  $('.showErrors').text("");
-  $('.statusError').text("")
+  $('.showErrors').text("The currency " + currency + " doesn't exist!");
+  $('.statusError').text("");
 }
 
 export function statusError(error) {
