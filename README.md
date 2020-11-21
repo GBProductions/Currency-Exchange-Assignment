@@ -1,12 +1,12 @@
 # _Currency Exchange_
 
-#### _{Brief description of application}, Nov. 20, 2020_
+#### _Using an Exchange Rate API, find out how much money you have in various international currencies. Nov. 20, 2020_
 
 #### By _**Garrett Brown**_
 
 ## Description
 
-_Currency Exchange program!_
+_Using the Exchangerate-API, find out how much your money is worth in various international currencies._
 
 ## SPECS
 
@@ -40,7 +40,7 @@ _For support, contact Garrett Brown <garrettpaulbrown@gmail.com>_
 ## Technologies Used
 * _HTML, CSS, Javascript, Jquery._
 * _ExchangeRate-API.com_
-* _Node.js, CL, ESLint, Webpack._
+* _Node.js, CL, ESLint, Webpack, GitHub._
 
 ### License
 
