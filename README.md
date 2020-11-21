@@ -20,8 +20,10 @@ _Currency Exchange program!_
 * _Open terminal on computer._
 * _Navigate to Desktop._
 * _Type "git clone https://github.com/GBProductions/Currency-Exchange-Assignment.git" into command line and press ENTER._
-* _Navigate to Currency-Exchange-Assignment folder and enter "code ." into command line and press ENTER._
-*TODO API INSTRUCTIONS
+* _Navigate to Currency-Exchange-Assignment folder and enter "code ." into command line and press ENTER to open in VS Code._
+* _Use VSCode to create a ".env" file in the root of your directory (or type "touch .env" into the command line.) Write the text "API_KEY="._
+* _In a internet browser, go to <https://www.exchangerate-api.com/> and apply for a Free API key (you will be required to create an account using your email address.)_
+* _When you receive a key, copy it into the ".env" file. Your file should now say "API_KEY=(key goes here)."_
 * _Type "npm install" into command line and press ENTER._
 * _Type "npm run build" into command line and press ENTER._
 * _Type "npm run start" into command line and press ENTER to run program."
@@ -37,7 +39,8 @@ _For support, contact Garrett Brown <garrettpaulbrown@gmail.com>_
 
 ## Technologies Used
 * _HTML, CSS, Javascript, Jquery._
-* _
+* _ExchangeRate-API.com_
+* _Node.js, CL, ESLint, Webpack._
 
 ### License
 

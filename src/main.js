@@ -37,7 +37,7 @@ $('document').ready(function() {
       } else if ((currency !== "EUR" || "GBP" || "JPY" || "CHF") && this.readyState === 4 && this.status === 200) {
         notCurrency(currency);
       }
-      if (this.readyState !== 4 || this.status !== 200) {
+      if (this.readyState === 4 && this.status !== 200) {
         let error = this.status;
         statusError(error);
       }

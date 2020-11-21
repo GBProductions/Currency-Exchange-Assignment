@@ -67,5 +67,5 @@ export function statusError(error) {
   $('.showJPY').text("");
   $('.showCHF').text("");
   $('.showErrors').text("");
-  $('.statusError').text("You have a " + error + "status error!");
+  $('.statusError').text("You have a " + error + " status error!");
 }
